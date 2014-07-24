@@ -15,7 +15,7 @@ def background_counting(arg):
     """
     value = int(arg)
     pid = os.getpid()
-    print "[{0}] Counting from 1 to {1}.".format(pid, value)
+    print('[{0}] Counting from 1 to {1}.'.format(pid, value))
     for i in range(1, value+1):
-        print '[{0}] {1}'.format(pid, i)
+        print('[{0}] {1}'.format(pid, i))
         time.sleep(1)

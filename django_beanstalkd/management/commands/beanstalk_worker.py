@@ -138,7 +138,7 @@ class Command(NoArgsCommand):
                 logger.debug("Calling %s with arg: %s" % (job_name, job.body))
                 try:
                     self.jobs[job_name](job.body)
-                except Exception, e:
+                except Exception as e:
                     tp, value, tb = sys.exc_info()
                     logger.error('Error while calling "%s" with arg "%s": '
                         '%s' % (
