@@ -18,7 +18,7 @@ def connect_beanstalkd():
     try:
         port = int(port)
         return Connection(server, port)
-    except (ValueError, SocketError), e:
+    except (ValueError, SocketError) as e:
         raise BeanstalkError(e)
 
 

@@ -9,9 +9,9 @@ class Command(NoArgsCommand):
     def handle_noargs(self, **options):
         client = BeanstalkClient()
 
-        print "Asynchronous Beanstalk Call"
-        print "-------------------------"
-        print "Notice how this app exits, while the workers still work on the tasks."
+        print('Asynchronous Beanstalk Call')
+        print('-------------------------')
+        print('Notice how this app exits, while the workers still work on the tasks.')
         for i in range(4):
             client.call(
                 'beanstalk_example.background_counting', '5'
