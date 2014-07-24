@@ -5,7 +5,7 @@ from django.conf import settings
 
 from beanstalkc import Connection, SocketError, DEFAULT_PRIORITY, DEFAULT_TTR
 
-from decorators import beanstalk_job
+from django_beanstalkd.decorators import beanstalk_job
 
 def connect_beanstalkd():
     """Connect to beanstalkd server(s) from settings file"""
